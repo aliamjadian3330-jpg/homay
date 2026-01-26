@@ -1,0 +1,739 @@
+<html lang="en" class=" js csstransforms csstransforms3d csstransitions"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <!-- <link rel="stylesheet" id="lineicons-css" href="https://s1.menudigital.ir/v3_assets/lineicons.css?v1769451471" type="text/css" media="all"> -->
+     <link rel="stylesheet" id="lineicons-css" href="https://s1.menudigital.ir/v3_assets/lineicons.css?v1769451471" type="text/css" media="all">
+
+
+    <title>
+        درباره عمارت همای
+    </title>
+    <link rel="icon" type="image/png" href="./images.jpg">
+    <link rel="stylesheet" href="./bot2.css">
+    
+    <link rel="stylesheet" href="./style.css">
+    
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+    :root {
+  --primary-color: #d45e32;
+  --primary-color-light: #faece7;
+  --primary-color-10: rgb(212,94,50,0.1);
+  --primary-color-20: rgb(212,94,50,0.2);
+  --primary-color-30: rgb(212,94,50,0.3);
+  --primary-color-40: rgb(212,94,50,0.4);
+  --primary-color-50: rgb(212,94,50,0.5);
+ 
+  --primary-backcolor: #ffffff;
+  --primary-forecolor: #212121;
+  --primary-backcolor-searchbox: #f3f3f3;
+  --primary-backcolor-box: #f8f8f8;
+
+  --primary-backcolor-shadowfood: #e6e6e6;
+
+  --secondary-color: #FE724C;
+  --heading-color: #000929;
+  --color-grey: #f5f5f7;
+  --shades-purple-red-92: #FCCBD5;
+  --shades-purple-94: #E8E6F9;
+  --shades-purple-96: #F0EFFB;
+  --shades-purple-98: #F7F7FD;
+  --shades-purple-90: #D8D6F5;
+  --grey-scale-50: #F9FAFB;
+  --grey-scale-100: #F4F4F6;
+  --grey-scale-200: #E5E6EB;
+  --grey-scale-300: #E5E6EB;
+  --grey-scale-400: #9EA3AE;
+  --grey-scale-500: #6C727F;
+  --grey-scale-600: #4D5461;
+  --grey-scale-700: #394150;
+  --grey-scale-800: #212936;
+  --grey-scale-900: #0B0A0F;
+    }
+    
+
+.categories-boxitem{
+    background: var(--primary-color-10);
+}
+
+#alert-1{
+    border-color:var(--primary-color);
+    background:var(--primary-color-light);
+}
+.navigatorbackground{
+    background: var(--primary-color-20);
+}
+.addresssection{
+   background: var(--primary-color-10); 
+}
+.selectedcat .categories-icon .icon img{
+    filter: drop-shadow(1px 2px 2px black);
+}
+/*.categories-icon .icon img{
+    filter: grayscale(1);
+}*/
+.selectedcat {
+    background: var(--primary-color-20); box-shadow:inset 0px 0px 20px 7px var(--primary-color-40);
+}
+
+.food-details .featured-item .featured-item-text .text-item .right h3{
+    font-size:16px;
+}
+.categories-icon .icon img{
+    width:40px;
+}
+.categories-item-text h3{
+    font-size:13px;
+    text-wrap: nowrap;
+}
+.categories-item1{
+     margin-left:5px;}
+.subitem_img{
+    display:contents;
+}
+.subitem_row{
+    font-size:12px;
+}
+
+.text-item-subitem{
+    display:flex;
+}
+
+.featured-item-text-haveimage{
+    margin-top: -150px;
+}
+
+.featured-item-text-viewmode1{
+    width:100%;
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* چشمک زن */
+
+
+
+  .status {
+  font-family: "Vazirmatn", "IRANSans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.35px;
+}
+
+.status .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.status .dot::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: glow 2.4s ease-in-out infinite;
+}
+
+/* ---------- رنگ‌ها ---------- */
+.status.open .dot {
+  background: radial-gradient(circle at 30% 30%, #6fffd2, #1f8f5f);
+  box-shadow: 0 0 10px rgba(47, 163, 122, 0.7);
+}
+.status.closed .dot {
+  background: radial-gradient(circle at 30% 30%, #ff9b9b, #c0392b);
+  box-shadow: 0 0 10px rgba(214, 69, 69, 0.65);
+}
+
+.status.open .dot::after {
+  background: radial-gradient(circle, rgba(47,163,122,0.45), transparent 65%);
+}
+.status.closed .dot::after {
+  background: radial-gradient(circle, rgba(214,69,69,0.45), transparent 65%);
+}
+
+.status .text {
+  display: flex;
+  gap: 4px;
+}
+
+.status.open .word { color: #1f6f55; }
+.status.closed .word { color: #7a2f2f; }
+
+/* انیمیشن‌ها */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.85); opacity: 0.7; }
+}
+@keyframes glow {
+  0%, 100% { transform: scale(0.9); opacity: 0.4; }
+  50% { transform: scale(1.15); opacity: 0.7; }
+}
+    
+    </style>
+</head>
+<body style="bottom: 0px;top: 0px;position: fixed;width: 100%;">
+    
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a href="./index.html" style="margin-left: 20px;margin-top:35px; padding:7px 10px;font-size:14px;float:left" class="main-btn"> بازگشت به سایت</a>
+                        <a href="" style="font-family:'estedad-verybold';color:var(--primary-forecolor);margin-right:20px;margin-top:35px;padding:5px 0px;font-size:18px;text-align:center;float:right">
+                            درباره ما 
+                            <svg width="25" height="25" viewBox="0 0 12 16" fill="#353535" xmlns="http://www.w3.org/2000/svg"><ellipse opacity="0.4" cx="6.00033" cy="12.1654" rx="5.83333" ry="3.33333"></ellipse><circle cx="6.00033" cy="3.83333" r="3.33333"></circle></svg>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="col-12">
+
+
+                    <div class="modal fade" id="phonecall_modal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="modal-img">
+                                        <span>
+                                           
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1007 13.359L16.5562 12.9062C17.1858 12.2801 18.1672 12.1515 18.9728 12.5894L20.8833 13.628C22.1102 14.2949 22.3806 15.9295 21.4217 16.883L20.0011 18.2954C19.6399 18.6546 19.1917 18.9171 18.6763 18.9651C17.4841 19.0763 15.0313 19.0163 12.1374 17.3223L16.1007 13.359ZM10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.06761 6.88446 4.45582 8.9649 6.15176 11.5215L10.1907 7.48257Z" fill="#1C274C"></path>
+                                            <path opacity="0.6" d="M12.0627 11.4971C9.11695 8.56804 10.1836 7.48913 10.1903 7.48242L6.15137 11.5214C6.81756 12.5256 7.68554 13.6034 8.81497 14.7264C9.95468 15.8596 11.0755 16.7008 12.137 17.3222L16.1003 13.3589C16.1003 13.3589 15.0177 14.4353 12.0627 11.4971Z" fill="#1C274C"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="modal-img-text" style="padding-top:10px">
+                                        <h3 class="phonecall_text"></h3>
+                                    </div>
+                                    <div class="modal-btn" style="margin-top:20px;gap: 10px;">
+                                        <button type="button" style="width:50%;font-size:13px" class="no-btn phonecall_addtocallbock" data-bs-dismiss="modal">ذخیره در مخاطبین</button>
+                                        <button type="button" style="width:50%;background:#197b79a3;border:1px solid #197b79a3" class="no-btn yes-btn phonecall_sms" data-bs-dismiss="modal">ارسال پیامک</button>
+                                        <button type="button" style="width:50%;background:#197b79;border:1px solid #197b79" class="no-btn yes-btn phonecall_call" data-bs-dismiss="modal">تماس</button>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                            
+                    
+                     <section class="categories" style="background:none;direction: rtl;">
+                         
+                        <footer class="footer" style="background:none;direction: rtl;padding:10px 0;margin-bottom:10px;">
+                            <div class="container">
+                                <div class="row" style="justify-content:center">
+                                    <div class="col-lg-12 col-md-12" style="text-align:center">
+                    
+                    
+                                     <style>
+                                         .dropdown-toggle::after{
+                                             font-size:18px;
+                                             vertical-align: 0em;
+                                         }
+                                     </style>           
+                              
+
+
+
+
+
+
+
+
+
+
+
+                              
+
+
+
+
+
+                                      
+                                                
+                                 
+                                   
+                                                
+                                        <div class="footer-logo">
+                                            <div class="logo">
+                                  <img style="position:relative;width:80px" alt="homay" src="./images.jpg">
+                                            </div>
+                                        </div>
+                    <div style="font-family:estedad-verybold;font-size:20px;font-weight:bold;margin-bottom:0px;position: relative;color:var(--primary-forecolor)" id="textslogan">کافه رستوران عمارت همای</div>
+                                            <h4 style="margin-top:5px;font-family:'esredad-medium';opacity:0.7;text-align:justify;text-align-last:center;font-size:14px;line-height:25px;position: relative;color:var(--primary-forecolor)">
+                                                                                            </h4>
+                    
+                                                                             
+
+                                                                                            <small id="order-status" class="status">
+  <i class="dot"></i>
+  <span class="text">
+    <span class="word">سفارش</span>
+    <span class="word">می‌پذیریم</span>
+  </span>
+</small>
+
+
+
+<script>
+const el = document.getElementById("order-status");
+const words = el.querySelectorAll(".word");
+
+function updateStatus() {
+  const now = new Date();
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const t = h + m/60;
+
+  if (t >= 11 && t < 24) {
+    el.classList.add("open");
+    el.classList.remove("closed");
+    words[0].innerText = "سفارش";
+    words[1].innerText = "می‌پذیریم";
+  } else {
+    el.classList.add("closed");
+    el.classList.remove("open");
+    words[1].innerText = "بسته‌ایم";
+    words[0].innerText = "در حال حاضر ";
+  
+  }
+}
+
+// اجرا در شروع
+updateStatus();
+
+// آپدیت هر دقیقه خودکار
+setInterval(updateStatus, 60000);
+</script>
+
+
+
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    
+                         
+                    
+                            
+                    </section>
+        
+         
+        
+
+
+
+ <section class="categories" style="background:none;direction: rtl;">
+
+    
+                
+    <footer class="footer" style="background:none;direction: rtl;padding:30px 0">
+        <div class="container">
+            <div class="row" style="justify-content:center">
+                                 <div class="col-lg-6 col-md-12" style="text-align:center">
+
+                            <div class="quick-line-item">
+                            
+                                <div class="quick-line-menu addresssection" style="border-radius:10px;padding-bottom: 15px;">
+                                     
+                                      
+                                                                               
+                                                                               <img src="./نقشه.png" style="width:100%;height:50%; ; border-top-left-radius:10px;border-top-right-radius:10px">
+                                                                                <div class="footer-icon" style="margin-top:0px;">
+                                            <span class="navigatorbackground" style="padding: 0px 15px 5px 15px;border-radius: 30px;border-top-right-radius:0px;;border-top-left-radius:0px;">
+                                            <div class="icon" style="display: contents;justify-content: center;gap:10px;">
+                                                                                                <a href="https://neshan.org/maps/places/2be34d28c38a7fd9d5067aa4f5fa6563?utm_source=chatgpt.com" target="_blank"><img class="fa-brands" src="https://s1.menudigital.ir/img/webappicons/neshan.png?v1" style="margin-top:2px;border-radius:50px;width:25px"></a>
+                                                <a href="https://balad.ir/location?latitude=32.384716 &amp;longitude=48.395054&amp;zoom=15.0" target="_blank"><img class="fa-brands" src="https://s1.menudigital.ir/img/webappicons/balad.png" style="margin-top:2px;border-radius:50px;width:25px"></a>
+                                            
+                                                <a href="https://www.google.com/maps/search/?api=1&query=%DA%A9%D8%A7%D9%81%D9%87+%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86+%D9%87%D9%85%D8%A7%DB%8C+%D8%B9%D9%85%D8%A7%D8%B1%D8%AA+%D8%AF%D8%B2%D9%81%D9%88%D9%84" target="_blank"><img class="fa-brands" src="https://s1.menudigital.ir/img/webappicons/googlemaps.png" style="margin-top:2px;border-radius:50px;width:25px"></a>
+                                                                                            </div>
+                                            </span>
+                                        </div>
+                                                                           
+                                    <p style="margin-top:10px;color:var(--primary-forecolor);font-weight:bold;font-size:14px;font-family:'esredad-medium'"> 📍دزفول، خیابان شریعتی غربی، نبش خیابان مسلم</p>
+                                    <ul style="cursor:pointer;direction: ltr;text-align: Center;">
+                                                                                    <li style="color:var(--primary-forecolor);" onclick="phonecall('06134340');">
+                                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.1007 13.359L16.5562 12.9062C17.1858 12.2801 18.1672 12.1515 18.9728 12.5894L20.8833 13.628C22.1102 14.2949 22.3806 15.9295 21.4217 16.883L20.0011 18.2954C19.6399 18.6546 19.1917 18.9171 18.6763 18.9651C17.4841 19.0763 15.0313 19.0163 12.1374 17.3223L16.1007 13.359ZM10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.06761 6.88446 4.45582 8.9649 6.15176 11.5215L10.1907 7.48257Z" style="fill:var(--primary-forecolor)"></path><path opacity="0.6" d="M12.0627 11.4971C9.11695 8.56804 10.1836 7.48913 10.1903 7.48242L6.15137 11.5214C6.81756 12.5256 7.68554 13.6034 8.81497 14.7264C9.95468 15.8596 11.0755 16.7008 12.137 17.3222L16.1003 13.3589C16.1003 13.3589 15.0177 14.4353 12.0627 11.4971Z" style="fill:var(--primary-forecolor)"></path></svg>
+                                                 
+                                          06134340 : تماس  ☎️ <br>           مدیریت:احمد راجی  ⭐                                 </li>
+                                                                            </ul>
+                                                                        <div class="footer-icon" style="margin-top:10px;">
+                                        <div class="icon navigatorsocials" style="padding-top:10px;position: relative;justify-content: center;">
+                                                                                                                                     <a href="https://www.instagram.com/mahedrestaurant" target="_blank"><i style="color:#ffffff" class="fa-brands fa-instagram"></i>   </a>                                                                                                                                                                                  <a href="https://api.whatsapp.com/send?phone=09338098899" target="_blank"><i style="color:#ffffff" class="fa-brands fa-whatsapp"></i></a>                                         </div>
+                                    </div>
+                                    
+         
+
+
+                                </div>
+
+                            </div>
+                   
+                </div>
+                                
+                                    <style>
+                                    
+                                    
+.online-status i:before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -4px;
+    top: -4px;
+    content: "";
+    background-color: rgba(33, 198, 79, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+                                    
+.offline-status i:before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -4px;
+    top: -4px;
+    content: "";
+    background-color: rgba(100, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+    .online-status i {
+top: 50%;
+    margin-top: 0;
+    -webkit-animation: flash 1s linear infinite;
+    -moz-animation: flash 1s linear infinite;
+    -ms-animation: flash 1s linear infinite;
+    -o-animation: flash 1s linear infinite;
+    animation: flash 1s linear infinite;
+
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: #21c64f;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-left: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+        }
+    .offline-status i {
+top: 50%;
+    margin-top: 0;
+    -webkit-animation: flash 1s linear infinite;
+    -moz-animation: flash 1s linear infinite;
+    -ms-animation: flash 1s linear infinite;
+    -o-animation: flash 1s linear infinite;
+    animation: flash 1s linear infinite;
+
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: #e52020;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-left: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+        }
+        
+        
+                                        .table1, th, td {
+  border-bottom: 1px solid #d2d2d2;
+  padding:2px;
+  font-size:15px;
+  text-align:center;
+}
+                                    </style>
+
+
+
+            </div>
+        </div>
+    </footer>
+
+</section>
+        
+        
+
+
+    
+                    
+                </div>
+
+                
+            </div>
+        </div>
+
+                    
+</main>
+<footer class="mdg-site-footer">
+		<div class="container">
+			<div class="mdg-footer-main">
+													<div class="mdg-footer-bottom-bar">
+													<div class="mdg-footer-copyright">
+								© تمامی حقوق مادی و معنوی برای کافه رستوران عمارت همای محفوظ است.							</div>
+												<div class="mdg-social-links">
+                            <a href="#" title="فیسبوک" class="facebook">
+                    <i class="lni lni-facebook"></i>
+                </a>
+                                        <a href="#" title="توییتر (X)" class="twitter">
+                <i class="lni lni-x"></i>
+            </a>
+                                    <a href="#" title="اینستاگرام" class="instagram">
+                <i class="lni lni-instagram"></i>
+            </a>
+                                    <a href="#" title="یوتیوب" class="youtube">
+                <i class="lni lni-youtube"></i>
+            </a>
+                                    <a href="#" title="تلگرام" class="telegram">
+                <i class="lni lni-telegram"></i>
+            </a>
+                                                        </div>
+					</div>
+							</div>
+		</div>
+	</footer>
+
+<style>
+    /* =========================
+   Footer – Luxury Edition
+========================= */
+.mdg-site-footer {
+  position: relative;
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,0.15), transparent 60%),
+    linear-gradient(180deg, #0a0a0a, #000);
+  color: #d0d0d0;
+  padding: 55px 0 35px;
+  overflow: hidden;
+  border-top: 1px solid rgba(212,175,55,0.18);
+  font-family: "Vazirmatn","Segoe UI",Tahoma,sans-serif;
+}
+
+/* خط طلایی متحرک */
+.mdg-site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 160%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212,175,55,0.8),
+    transparent
+  );
+  animation: goldLine 6s linear infinite;
+}
+
+/* هاله نور */
+.mdg-site-footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 70%);
+  pointer-events: none;
+}
+
+/* محتوا */
+.mdg-footer-main {
+  display: flex;
+  justify-content: center;
+}
+
+.mdg-footer-bottom-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  animation: footerFadeUp 1.2s ease forwards;
+}
+
+/* کپی‌رایت */
+.mdg-footer-copyright {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.9;
+  position: relative;
+}
+
+.mdg-footer-copyright::before {
+  content: "✦";
+  font-size: 2.3rem;
+  color: #d4af37;
+  margin-left: 10px;
+  animation: pulseStar 2.5s ease-in-out infinite;
+}
+
+/* شبکه‌های اجتماعی */
+.mdg-social-links {
+  display: flex;
+  gap: 14px;
+}
+
+.mdg-social-links a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(212,175,55,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+/* موج نور هنگام هاور */
+.mdg-social-links a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.45), transparent 70%);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.mdg-social-links a:hover::before {
+  opacity: 1;
+}
+
+/* Hover حرفه‌ای */
+.mdg-social-links a:hover {
+  transform: translateY(-6px) scale(1.08) rotate(6deg);
+  box-shadow: 0 0 28px rgba(212,175,55,0.65);
+}
+
+/* رنگ‌ها */
+.mdg-social-links a.instagram:hover { background:#e1306c; color:#fff; }
+.mdg-social-links a.telegram:hover { background:#229ED9; color:#fff; }
+.mdg-social-links a.youtube:hover { background:#ff0000; color:#fff; }
+.mdg-social-links a.facebook:hover { background:#1877f2; color:#fff; }
+.mdg-social-links a.twitter:hover { background:#000; color:#fff; }
+
+/* موبایل */
+@media (max-width: 768px) {
+  .mdg-footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes goldLine {
+  from { transform: translateX(0); }
+  to { transform: translateX(30%); }
+}
+
+@keyframes footerFadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseStar {
+  0%,100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+
+/* ===== Homay Bird Signature ===== */
+.mdg-site-footer .mdg-footer-copyright {
+  padding-right: 36px;
+  position: relative;
+}
+
+/* پرنده همای */
+.mdg-site-footer .mdg-footer-copyright::after {
+  content: "𓅃"; /* نماد پرنده کلاسیک */
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 2.3rem;
+  color: #d4af37;
+  opacity: 0.8;
+  animation: homayFly 4s ease-in-out infinite;
+  text-shadow: 0 0 8px rgba(212,175,55,0.6);
+}
+
+/* انیمیشن پرواز خیلی ملایم */
+@keyframes homayFly {
+  0%,100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-6px) rotate(-6deg);
+    opacity: 1;
+  }
+}
+
+</style>
+
+    </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
