@@ -320,162 +320,7 @@ body .is-layout-grid { display: grid; gap: 0.5em; }
 </head>
 
 <!-- ............................................................. -->
-
-    
-<!-- Splash Screen -->
-<div id="splash-screen">
-  <div class="logo-wrapper">
-    <div class="logo-ring">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQ3nLYhsgga95Eei2K8VK0TpVaxA5BjEa3A&s"
-        alt="عمارت همای"
-        id="splash-logo"
-      />
-    </div>
-
-    <!-- Loader سه نقطه‌ای حرفه‌ای -->
-    <div class="loader">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <h1 class="title">عمارت همای</h1>
-  <p class="subtitle">تجربه‌ای اصیل از طعم و شکوه در دزفول</p>
-</div>
-
-<style>
-/* کل صفحه */
-#splash-screen {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(to bottom, #111, #000);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  overflow: hidden;
-  
-}
-
-/* حلقه لوگو */
-.logo-ring {
-  padding: 12px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, gold 40%, transparent 70%);
-  box-shadow: 0 0 25px rgba(255,215,0,0.5);
-  z-index: 2;
-  animation: float 3s ease-in-out infinite;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* لوگو */
-#splash-logo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  box-shadow: 0 0 20px rgba(255,215,0,0.4);
-}
-
-/* عنوان */
-.title {
-  font-size: 4rem;
-  color: #181ce7;
-  margin-top: 15px;
-  text-shadow: 2px 2px 8px #000;
-  font-family: "IranNastaliq", "Traditional Arabic", serif;
-  opacity: 0;
-  animation: fadeInText 1.5s forwards 0.5s;
-  font-size: 40px;
-}
-
-/* زیرعنوان */
-.subtitle {
-  margin-top: 10px;
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  opacity: 0;
-  animation: fadeInText 1.5s forwards 1s;
-  font-family: "Noto Naskh Arabic", serif;
-}
-
-.bird-loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: -20px; /* نزدیک به هم */
-  margin-top: 35px;
-}
-
-
-.loader span:nth-child(1) { animation-delay: 0.1s; }
-.loader span:nth-child(2) { animation-delay: 12.10s; }
-.loader span:nth-child(3) { animation-delay: 0.1s; }
-
-/* انیمیشن‌ها */
-@keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
-@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-@keyframes fadeInText { to { opacity: 1; } }
-
-/* انیمیشن موجی حرفه‌ای Loader */
-@keyframes wave {
-  0%, 60%, 100% {
-    transform: translateY(0) scale(0.7) rotate(0deg);
-    opacity: 0.4;
-    box-shadow: 0 0 6px rgba(255,215,0,0.4), 0 0 12px rgba(255,215,0,0.2);
-  }
-  30% {
-    transform: translateY(-18px) scale(1.2) rotate(3deg);
-    opacity: 1;
-    box-shadow: 0 0 22px rgba(255,215,0,0.9), 0 0 30px rgba(255,215,0,0.5);
-  }
-}
-
-
-/* Loader سه نقطه‌ای حرفه‌ای */
-.loader {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top:30px;
-}
-
-.loader span {
-  width: 16px;
-  height: 16px;
-  background: radial-gradient(circle at 30% 30%, #fcfbfa, #f3f1ec);
-  border-radius: 50%;
-  display: block;
-  box-shadow: 0 0 10px rgba(250, 250, 248, 0.904), 0 0 18px rgba(250, 250, 249, 0.815);
-  animation: wave 1.2s infinite ease-in-out;
-}
-
-.loader span:nth-child(1) { animation-delay: 0.4s; }
-.loader span:nth-child(2) { animation-delay: 0.2s; }
-.loader span:nth-child(3) { animation-delay: 0s; }
-
-</style>
-
-<script>
-// حذف خودکار Splash Screen بعد از 10 ثانیه
-setTimeout(() => {
-  const splash = document.getElementById("splash-screen");
-  splash.style.opacity = "0";      // محو شدن
-  splash.style.visibility = "hidden"; // مخفی شدن کامل
-}, 6000); // 10000 میلی‌ثانیه = 10 ثانیه
-</script>
-
-
-
-
-
-
+<!-- 
 
 
 <!-- ............................................................... -->
@@ -658,7 +503,7 @@ setTimeout(() => {
     font-display: swap;
 }
                     </style>
-<b style="color: #1877f2; font-family: 'MyFont', sans-serif;"><span style="color: #b98f04;">عمارت</span> همای</b>
+<img src="./ChatGPT Image May 30, 2026, 01_06_39 AM.png" style="width: 30%;"/>
 <div class="logo">
 <img style="position:relative;width:60px;border-radius:50%;" alt="mahed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQ3nLYhsgga95Eei2K8VK0TpVaxA5BjEa3A&s">
 </div>
@@ -694,12 +539,12 @@ setTimeout(() => {
     <div class="mdg-food-item-inner">
                                       <a href="javascript:;" class="mdg-food-item-featured-wrapper">
                 
-                <img src="https://s5.menudigital.ir/udata/mahed/68c6f8b661ded.jpeg?v2" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
+                <img src="./تصویر/پیش غذا 4.jpg" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
                 
                 </a>
                                 <div class="mdg-food-item-content">
-            <h3><a href="javascript:;" class="">سینی مزه سرد</a></h3>
-            <p>حمص ، محمره ، باباغنوش ، زیتون مشکله</p>
+            <h3><a href="javascript:;" class="">بوفالو وینگز</a></h3>
+            <p>بال مرغ سوخاری شده  با سس تند بوفالو وسیب زمینی تکه ای</p>
             
             <div class="mdg-price-wrapper">
                 <div class="mdg-price-item" data-price-id="1">
@@ -708,7 +553,7 @@ setTimeout(() => {
                                     <style> .hmnfCP { color:#9a9a9a;display: inline-flex; -webkit-box-pack: initial; place-content: initial; align-items: flex-start; flex-flow: column; flex: unset; } </style>
                                                                                 <h3 style="font-size:20px;margin-bottom: 0.3rem;">
                                     
-                                    650,000 
+                                    260000
                                                                         <span style="font-size:12px">تومان</span>
                                                                     
                                 </h3>
@@ -729,12 +574,12 @@ setTimeout(() => {
     <div class="mdg-food-item-inner">
                                       <a href="javascript:;" class="mdg-food-item-featured-wrapper">
                 
-                <img src="https://s5.menudigital.ir/udata/mahed/66fc4ed12a5fc.jpeg?v2" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
+                <img src="./تصویر/پیشت غذا2.jpg" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
                 
                 </a>
                                 <div class="mdg-food-item-content">
-            <h3><a href="javascript:;" class="">حمص</a></h3>
-            <p>غذای سنتی و بسیار محبوب در کشور های عربی ، پایه اصلی از نخود پخته شده و ادویجات عربی</p>
+            <h3><a href="javascript:;" class="">داینامیک میگو </a></h3>
+            <p>میگو تمپورا شده در سس داینامیک به همراه سبزیجات</p>
             
             <div class="mdg-price-wrapper">
                 <div class="mdg-price-item" data-price-id="1">
@@ -743,7 +588,7 @@ setTimeout(() => {
                                     <style> .hmnfCP { color:#9a9a9a;display: inline-flex; -webkit-box-pack: initial; place-content: initial; align-items: flex-start; flex-flow: column; flex: unset; } </style>
                                                                                 <h3 style="font-size:20px;margin-bottom: 0.3rem;">
                                     
-                                    250,000 
+                                    370000
                                                                         <span style="font-size:12px">تومان</span>
                                                                     
                                 </h3>
@@ -764,12 +609,12 @@ setTimeout(() => {
     <div class="mdg-food-item-inner">
                                       <a href="javascript:;" class="mdg-food-item-featured-wrapper">
                 
-                <img src="https://s5.menudigital.ir/udata/mahed/66fc4ef6eff5e.jpeg?v2" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
+                <img src="./تصویر/پیش غذاذ.jpg" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
                 
                 </a>
                                 <div class="mdg-food-item-content">
-            <h3><a href="javascript:;" class="">حمص بلحم(حمص+چنجه)</a></h3>
-            <p>فیله گوساله، حمص</p>
+            <h3><a href="javascript:;" class="">اسپرینگ رول </a></h3>
+            <p> رول پیچیده شده با مرغ و سبزیجات به همراه سس رنچ و گلیزانار</p>
             
             <div class="mdg-price-wrapper">
                 <div class="mdg-price-item" data-price-id="1">
@@ -778,7 +623,7 @@ setTimeout(() => {
                                     <style> .hmnfCP { color:#9a9a9a;display: inline-flex; -webkit-box-pack: initial; place-content: initial; align-items: flex-start; flex-flow: column; flex: unset; } </style>
                                                                                 <h3 style="font-size:20px;margin-bottom: 0.3rem;">
                                     
-                                    750,000 
+                                    240000
                                                                         <span style="font-size:12px">تومان</span>
                                                                     
                                 </h3>
@@ -794,47 +639,18 @@ setTimeout(() => {
             
                 </div>
 </div>
-<div class="col-xl-6 mb-3 mb-md-4">
-                            <div class="mdg-food-item  mdg-food-item-has-image" data-post-id="32">
-    <div class="mdg-food-item-inner">
-                                  <div class="mdg-food-item-content">
-            <h3><a href="javascript:;" class="">روبیان متبل</a></h3>
-            <p>میگو سرخ شده,متبل</p>
-            
-            <div class="mdg-price-wrapper">
-                <div class="mdg-price-item" data-price-id="1">
-                    
-                    
-                                    <style> .hmnfCP { color:#9a9a9a;display: inline-flex; -webkit-box-pack: initial; place-content: initial; align-items: flex-start; flex-flow: column; flex: unset; } </style>
-                                                                                <h3 style="font-size:20px;margin-bottom: 0.3rem;">
-                                    
-                                    620,000 
-                                                                        <span style="font-size:12px">تومان</span>
-                                                                    
-                                </h3>
-                                                                  
 
-                 
-                    
-                    
-                    </div></div>        </div>
-            </div>
-                                                    
-            
-            
-                </div>
-</div>
 <div class="col-xl-6 mb-3 mb-md-4">
                             <div class="mdg-food-item  out-of-stock  mdg-food-item-has-image" data-post-id="32">
     <div class="mdg-food-item-inner">
                                       <a href="javascript:;" class="mdg-food-item-featured-wrapper">
                 
-                <img src="https://s5.menudigital.ir/udata/mahed/68a716a76fc66.jpeg?v2" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
+                <img src="./تصویر/پیش.jpg" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
                 
                 </a>
                                 <div class="mdg-food-item-content">
-            <h3><a href="javascript:;" class="">سینی ماست</a></h3>
-            <p>5 نوع از ماست های متفاوت مناسب برای مزه کردن</p>
+            <h3><a href="javascript:;" class="">چیکن بونلس</a></h3>
+            <p> تکه های مرغ سوخاری به همراه سزیجات مزه دار شده</p>
             
             <div class="mdg-price-wrapper">
                 <div class="mdg-price-item" data-price-id="1">
@@ -843,7 +659,7 @@ setTimeout(() => {
                                     <style> .hmnfCP { color:#9a9a9a;display: inline-flex; -webkit-box-pack: initial; place-content: initial; align-items: flex-start; flex-flow: column; flex: unset; } </style>
                                                                                 <h3 style="font-size:20px;margin-bottom: 0.3rem;">
                                     
-                                    300,000 
+                                    230000
                                                                         <span style="font-size:12px">تومان</span>
                                                                     
                                 </h3>
@@ -1188,11 +1004,11 @@ setTimeout(() => {
     <div class="mdg-food-item-inner">
                                       <a href="javascript:;" class="mdg-food-item-featured-wrapper">
                 
-                <img src="https://s5.menudigital.ir/udata/mahed/6705a68d5824a.jpeg?v2" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
+                <img src="./تصویر/اصلیی.jpg" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
                 
                 </a>
                                 <div class="mdg-food-item-content">
-            <h3><a href="javascript:;" class="">چلو ماهیچه </a></h3>
+            <h3><a href="javascript:;" class="">دست شونه بره </a></h3>
             <p>1 عدد ماهیچه گوسفندی ، برنج ایرانی ، دورچین </p>
             
             <div class="mdg-price-wrapper">
@@ -1202,7 +1018,7 @@ setTimeout(() => {
                                     <style> .hmnfCP { color:#9a9a9a;display: inline-flex; -webkit-box-pack: initial; place-content: initial; align-items: flex-start; flex-flow: column; flex: unset; } </style>
                                                                                 <h3 style="font-size:20px;margin-bottom: 0.3rem;">
                                     
-                                    1,700,000 
+                                    2480000
                                                                         <span style="font-size:12px">تومان</span>
                                                                     
                                 </h3>
@@ -1259,7 +1075,7 @@ setTimeout(() => {
     <div class="mdg-food-item-inner">
                                       <a href="javascript:;" class="mdg-food-item-featured-wrapper">
                 
-                <img src="https://s5.menudigital.ir/udata/mahed/66fc4e08ba39b.jpeg?v2" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
+                <img src="./تصویر/غذای اصلی7.jpg" decoding="async" width="300" height="300" class="attachment-menudigi-xs size-menudigi-xs wp-post-image" alt="">    <!-- <span class="mdg-food-special-label">ویژه</span>                    -->
                 
                 </a>
                                 <div class="mdg-food-item-content">
@@ -1273,7 +1089,7 @@ setTimeout(() => {
                                     <style> .hmnfCP { color:#9a9a9a;display: inline-flex; -webkit-box-pack: initial; place-content: initial; align-items: flex-start; flex-flow: column; flex: unset; } </style>
                                                                                 <h3 style="font-size:20px;margin-bottom: 0.3rem;">
                                     
-                                    950,000 
+                                    520000
                                                                         <span style="font-size:12px">تومان</span>
                                                                     
                                 </h3>
@@ -4452,7 +4268,7 @@ setTimeout(() => {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 70%);
+  background: radial-gradient(circle at center, rgba(228, 220, 196, 0.08), transparent 70%);
   pointer-events: none;
 }
 
