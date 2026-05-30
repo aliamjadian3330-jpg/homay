@@ -320,7 +320,162 @@ body .is-layout-grid { display: grid; gap: 0.5em; }
 </head>
 
 <!-- ............................................................. -->
-<!-- 
+
+    
+<!-- Splash Screen -->
+<div id="splash-screen">
+  <div class="logo-wrapper">
+    <div class="logo-ring">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFQ3nLYhsgga95Eei2K8VK0TpVaxA5BjEa3A&s"
+        alt="عمارت همای"
+        id="splash-logo"
+      />
+    </div>
+
+    <!-- Loader سه نقطه‌ای حرفه‌ای -->
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <h1 class="title">عمارت همای</h1>
+  <p class="subtitle">تجربه‌ای اصیل از طعم و شکوه در دزفول</p>
+</div>
+
+<style>
+/* کل صفحه */
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom, #111, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  
+}
+
+/* حلقه لوگو */
+.logo-ring {
+  padding: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, gold 40%, transparent 70%);
+  box-shadow: 0 0 25px rgba(255,215,0,0.5);
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* لوگو */
+#splash-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+/* عنوان */
+.title {
+  font-size: 4rem;
+  color: #181ce7;
+  margin-top: 15px;
+  text-shadow: 2px 2px 8px #000;
+  font-family: "IranNastaliq", "Traditional Arabic", serif;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards 0.5s;
+  font-size: 40px;
+}
+
+/* زیرعنوان */
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards 1s;
+  font-family: "Noto Naskh Arabic", serif;
+}
+
+.bird-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: -20px; /* نزدیک به هم */
+  margin-top: 35px;
+}
+
+
+.loader span:nth-child(1) { animation-delay: 0.1s; }
+.loader span:nth-child(2) { animation-delay: 12.10s; }
+.loader span:nth-child(3) { animation-delay: 0.1s; }
+
+/* انیمیشن‌ها */
+@keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes fadeInText { to { opacity: 1; } }
+
+/* انیمیشن موجی حرفه‌ای Loader */
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: translateY(0) scale(0.7) rotate(0deg);
+    opacity: 0.4;
+    box-shadow: 0 0 6px rgba(255,215,0,0.4), 0 0 12px rgba(255,215,0,0.2);
+  }
+  30% {
+    transform: translateY(-18px) scale(1.2) rotate(3deg);
+    opacity: 1;
+    box-shadow: 0 0 22px rgba(255,215,0,0.9), 0 0 30px rgba(255,215,0,0.5);
+  }
+}
+
+
+/* Loader سه نقطه‌ای حرفه‌ای */
+.loader {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top:30px;
+}
+
+.loader span {
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle at 30% 30%, #fcfbfa, #f3f1ec);
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 0 10px rgba(250, 250, 248, 0.904), 0 0 18px rgba(250, 250, 249, 0.815);
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.loader span:nth-child(1) { animation-delay: 0.4s; }
+.loader span:nth-child(2) { animation-delay: 0.2s; }
+.loader span:nth-child(3) { animation-delay: 0s; }
+
+</style>
+
+<script>
+// حذف خودکار Splash Screen بعد از 10 ثانیه
+setTimeout(() => {
+  const splash = document.getElementById("splash-screen");
+  splash.style.opacity = "0";      // محو شدن
+  splash.style.visibility = "hidden"; // مخفی شدن کامل
+}, 6000); // 10000 میلی‌ثانیه = 10 ثانیه
+</script>
+
+
+
+
+
+
 
 
 <!-- ............................................................... -->
